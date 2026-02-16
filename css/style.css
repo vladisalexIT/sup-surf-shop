@@ -371,4 +371,63 @@ svg * {
     width: 178px;
 }
 
-.info__specs-text {}
+.product-featured {
+    padding-block: 150px;
+}
+
+.product-featured__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: clamp(10px, 4.68vw, 90px);
+}
+
+.product-featured__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    flex-basis: 510px;
+}
+
+.product-featured__title {
+    font-family: var(--font-family-accent);
+    font-weight: 400;
+    font-size: 60px;
+    color: var(--color-blue);
+    white-space: nowrap;
+}
+
+.product-featured__item {
+    width: 292px;
+}
+
+.product-featured__item:hover .product-featured__item-title {
+    color: var(--color-blue);
+}
+
+.product-featured__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.product-featured__item-title {
+    font-weight: 700;
+    color: var(--color-dark-alternate);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    transition-duration: var(--transition-duration);
+}
+
+.product-featured__button {
+    display: inline-flex;
+    height: 80px;
+    align-self: start;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 197px;
+    background: none;
+    border: 2px solid var(--color-blue);
+    font-family: var(--font-family-accent);
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--color-blue);
+    cursor: pointer;
+}

@@ -446,7 +446,7 @@ svg * {
     position: absolute;
     right: 0;
     bottom: 130px;
-    z-index: -1;
+    z-index: 1;
     width: 250px;
     aspect-ratio: 1;
     display: flex;
@@ -456,6 +456,11 @@ svg * {
     font-size: 40px;
     color: var(--color-dark-alternate);
     background: url(../images/star.svg) center/contain no-repeat;
+    transition: transform .2s;
+}
+
+.product-featured__price:hover {
+    transform: scale(1.1);
 }
 
 .technology {
@@ -482,7 +487,7 @@ svg * {
 .technology-btn {
     position: absolute;
     top: 50vh;
-    right: 350px;
+    right: 32%;
     z-index: 100;
 }
 
@@ -572,9 +577,7 @@ svg * {
     gap: 20px;
 }
 
-.technology__gallery-max-image--1 {
-
-}
+.technology__gallery-max-image--1 {}
 
 .technology__gallery-max-image--2 {
     grid-column: 2 / -1;
@@ -613,4 +616,86 @@ svg * {
     color: var(--color-light);
     background-color: var(--color-blue);
     border-radius: 0 0 0 200px;
+}
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background-color: var(--color-dark-alternate);
+    color: var(--color-light);
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__title {
+    margin-bottom: 27px;
+}
+
+.footer__logo {
+    align-self: flex-start;
+}
+
+.footer__logo:hover path {
+    fill: var(--color-blue);
+}
+
+.footer__form {
+    max-width: 500px;
+    width: 100%;
+}
+
+.footer__field {
+    margin-bottom: 57px;
+}
+
+.footer__input {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+    color: var(--color-light);
+}
+
+.footer__input::placeholder {
+    font-family: var(--font-family-base);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-light);
+    opacity: 0.2;
+}
+
+.footer__input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.footer__form-button {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    padding-inline: 66px;
+    margin-bottom: 110px;
+}
+
+.footer__social__title {
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+.footer__social-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    gap: 52px;
+    margin-bottom: 50px;
+}
+
+.footer__menu-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+    font-weight: 700;
 }
